@@ -1,0 +1,93 @@
+﻿    <Window x:Class="GW2StatCombo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GW2Stats"
+        mc:Ignorable="d" Height="411.681" Width="325.564" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Title="GW2 StatCombo">
+    <Window.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="Power" UriSource="Images/Power.png"/>
+            <BitmapImage x:Key="Precision" UriSource="Images/Precision.png"/>
+            <BitmapImage x:Key="Toughness" UriSource="Images/Toughness.png"/>
+            <BitmapImage x:Key="Vitality" UriSource="Images/Vitality.png"/>
+            <BitmapImage x:Key="ConditionDamage" UriSource="Images/Condition_Damage.png"/>
+            <BitmapImage x:Key="HealingPower" UriSource="Images/Healing_Power.png"/>
+            <BitmapImage x:Key="Concentration" UriSource="Images/Concentration.png"/>
+            <BitmapImage x:Key="Expertise" UriSource="Images/Expertise.png"/>
+            <BitmapImage x:Key="Ferocity" UriSource="Images/Ferocity.png"/>
+        </ResourceDictionary>
+     </Window.Resources>
+        <Grid>
+        <CheckBox x:Name="Power" HorizontalAlignment="Left" Margin="28,46,0,0" VerticalAlignment="Top" Checked="Power_Checked" Unchecked="Power_Unchecked">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{StaticResource Power}" Height="18"/>
+                <TextBlock Text="Power" Margin="3,0,0,0"/>
+            </StackPanel>
+        </CheckBox>
+        <CheckBox x:Name="Precision" HorizontalAlignment="Left" Margin="28,66,0,0" VerticalAlignment="Top" Checked="Precision_Checked" Unchecked="Precision_Unchecked">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{StaticResource Precision}" Height="18"/>
+                <TextBlock Text="Precision" Margin="3,0,0,0"/>
+            </StackPanel>
+        </CheckBox>
+        <CheckBox x:Name="Toughness" HorizontalAlignment="Left" Margin="28,86,0,0" VerticalAlignment="Top" Checked="Toughness_Checked" Unchecked="Toughness_Unchecked">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{StaticResource Toughness}" Height="18"/>
+                <TextBlock Text="Toughness" Margin="3,0,0,0"/>
+            </StackPanel>
+        </CheckBox>
+        <CheckBox x:Name="Vitality" Margin="28,106,0,0" VerticalAlignment="Top" Checked="Vitality_Checked" Unchecked="Vitality_Unchecked">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{StaticResource Vitality}" Height="18"/>
+                <TextBlock Text="Vitality" Margin="3,0,0,0"/>
+            </StackPanel>
+        </CheckBox>
+        <CheckBox x:Name="ConditionDamage" HorizontalAlignment="Left" Margin="146,36,0,0" VerticalAlignment="Top" Checked="ConditionDamage_Checked" Unchecked="ConditionDamage_Unchecked">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{StaticResource ConditionDamage}" Height="18"/>
+                <TextBlock Text="Condition Damage" Margin="3,0,0,0"/>
+            </StackPanel>
+        </CheckBox>
+        <CheckBox x:Name="HealingPower" HorizontalAlignment="Left" Margin="146,56,0,0" VerticalAlignment="Top" Checked="HealingPower_Checked" Unchecked="HealingPower_Unchecked">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{StaticResource HealingPower}" Height="18"/>
+                <TextBlock Text="Healing Power" Margin="3,0,0,0"/>
+            </StackPanel>
+        </CheckBox>
+        <CheckBox x:Name="Concentration" HorizontalAlignment="Left" Margin="146,76,0,0" VerticalAlignment="Top" Checked="Concentration_Checked" Unchecked="Concentration_Unchecked">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{StaticResource Concentration}" Height="18"/>
+                <TextBlock Text="Concentration" Margin="3,0,0,0"/>
+            </StackPanel>
+        </CheckBox>
+        <CheckBox x:Name="Expertise" HorizontalAlignment="Left" Margin="146,96,0,0" VerticalAlignment="Top" Checked="Expertise_Checked" Unchecked="Expertise_Unchecked">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{StaticResource Expertise}" Height="18"/>
+                <TextBlock Text="Expertise" Margin="3,0,0,0"/>
+            </StackPanel>
+        </CheckBox>
+        <CheckBox x:Name="Ferocity" HorizontalAlignment="Left" Margin="146,118,0,0" VerticalAlignment="Top" Checked="Ferocity_Checked" Unchecked="Ferocity_Unchecked">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{StaticResource Ferocity}" Height="18"/>
+                <TextBlock Text="Ferocity" Margin="3,0,0,0"/>
+            </StackPanel>
+        </CheckBox>
+        <ListBox x:Name="StatCombinationBox" HorizontalAlignment="Left" Height="187" Margin="23,156,0,0" VerticalAlignment="Top" Width="264">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                <ContentPresenter/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+
+    </Grid>
+    
+</Window>
+    
